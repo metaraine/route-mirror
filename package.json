@@ -1,8 +1,8 @@
 {
   "name": "route-mirror",
   "version": "0.1.0",
-  "description": "Auto generate similar express routes that redirect to an original.",
-  "license": "MIT",
+  "description": "Auto generate redirects for similar urls in express.",
+  "license": "ISC",
   "repository": "metaraine/route-mirror",
   "author": {
     "name": "Raine Lourie",

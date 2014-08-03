@@ -1,8 +1,8 @@
-module.exports = function(app) {
+module.exports = function(app, urlTransform) {
 
 	var mirror = function(verb, url, handler) {
 		app[verb](url, handler)
-		app[verb](url.replace(/-/g,''), function(req, res) {
+		app[verb](urlTransform(url), function(req, res) {
 			res.redirect(url)
 		})
 	}

@@ -19,12 +19,14 @@ var routeMirror = require('route-mirror')
 
 var app = express()
 
-// create a mirror that be used to set up redirects for non-slugified urls.
+// create a mirror that can be used to set up redirects for non-slugified urls.
 var mirror = routeMirror(app, function(url) {
 	return url.replace(/-/g, '')
 })
 
-// this will automatically set up a route at '/thisisatest' that redirects to '/this-is-a-test'
+// this will set up two routes:
+//   '/this-is-a-test'
+//   '/thisisatest' which will redirect to '/this-is-a-test'
 mirror.get('/this-is-a-test', function(req, res) {
 	res.render('test')
 })
@@ -33,4 +35,4 @@ mirror.get('/this-is-a-test', function(req, res) {
 
 ## License
 
-MIT © [Raine Lourie](https://github.com/metaraine)
+ISC © [Raine Lourie](https://github.com/metaraine)
