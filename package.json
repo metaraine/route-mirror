@@ -1,6 +1,6 @@
 {
   "name": "route-mirror",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Auto generate similar express routes that redirect to an original.",
   "license": "MIT",
   "repository": "metaraine/route-mirror",
