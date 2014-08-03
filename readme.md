@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/metaraine/route-mirror.svg?branch=master)](https://travis-ci.org/metaraine/route-mirror)
 [![NPM version](https://badge.fury.io/js/route-mirror.svg)](http://badge.fury.io/js/route-mirror)
 
-> Auto generate similar express routes that redirect to an original.
+> Auto generate redirects for similar urls in express.
 
 
 ## Install
@@ -18,6 +18,8 @@ $ npm install --save route-mirror
 var routeMirror = require('route-mirror')
 
 var app = express()
+
+// create a mirror that be used to set up redirects for non-slugified urls.
 var mirror = routeMirror(app, function(url) {
 	return url.replace(/-/g, '')
 })
