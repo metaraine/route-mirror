@@ -1,6 +1,6 @@
 {
   "name": "route-mirror",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Auto generate redirects for similar urls in express.",
   "license": "ISC",
   "repository": "metaraine/route-mirror",
