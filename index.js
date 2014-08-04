@@ -8,10 +8,10 @@ module.exports = function(app, urlTransform) {
 	}
 
 	return {
-		get:    mirror.bind(null, 'get'),
-		post:   mirror.bind(null, 'post'),
-		put:    mirror.bind(null, 'put'),
-		delete: mirror.bind(null, 'delete'),
-		all:    mirror.bind(null, 'all'),
+		get:    mirror.bind(app, 'get'),
+		post:   mirror.bind(app, 'post'),
+		put:    mirror.bind(app, 'put'),
+		delete: mirror.bind(app, 'delete'),
+		all:    mirror.bind(app, 'all'),
 	}
 }
